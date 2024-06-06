@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "AdditionGameView.showHighScore.getter:AdditionGameView.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "showHighScore">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in closure #1 in AdditionGameView.body.getter:AdditionGameView.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "showHighScore">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "HighScoreViewModel.isNewHighScore(score:):HighScoreViewModel.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "minHighScore">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in AdditionGameView.body.getter:AdditionGameView.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "showHighScore">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #4 in AdditionGameView.body.getter:AdditionGameView.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "highScoreViewIsPresented">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

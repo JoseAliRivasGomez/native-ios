@@ -1,0 +1,69 @@
+
+import SwiftUI
+
+struct EnterNewHighScoreView: View {
+    let score: Int
+    @Binding var name: String
+    @Binding var isPresented: Bool
+
+    @Environment(\.modelContext) var modelContext
+    
+    var body: some View {
+        ZStack {
+            BackgroundView(colorList: [.blue, .purple], opacity: 1)
+            VStack {
+                Text("New High Score!")
+                    .font(.largeTitle)
+                    .foregroundColor(.white)
+                    .fontWeight(.semibold)
+                    .padding()
+                
+                Text("\(score)")
+                    .font(.largeTitle)
+                    .foregroundColor(.white)
+                    .padding()
+                
+                TextField("Name", text: $name)
+                    .font(.largeTitle)
+                    .fontWeight(.semibold)
+                    .multilineTextAlignment(.center)
+                    .autocorrectionDisabled(true)
+                    .padding()
+                    .background(Color.white)
+                    .cornerRadius(10)
+                    .padding()
+                
+                Button(action: {
+                    addHighScore()
+                    
+                    isPresented = false
+                }, label: {
+                    Text("Save")
+                        .font(.title)
+                        .foregroundColor(.white)
+                        .padding()
+                        .background(Color.green)
+                        .cornerRadius(10)
+                })
+            }
+        }
+    }
+    
+    func addHighScore() {
+        name = name.isEmpty ? "Anon" : name
+        modelContext
+            .insert(
+            HighScoreEntity(
+                name: name,
+                score: score)
+            )
+    }
+}
+
+#Preview {
+    EnterNewHighScoreView(
+        score: 123,
+        name: .constant(""),
+        isPresented: .constant(true))
+    .modelContainer(for: HighScoreEntity.self)
+}
